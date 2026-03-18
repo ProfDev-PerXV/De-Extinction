@@ -1,0 +1,312 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* =========================
+   GLOBAL SITE STYLES
+========================= */
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #fdfcfb, #f5f3ee);
+    color: #4b4b4b;
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+.container {
+    max-width: 1100px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header, header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid #e6e2dc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #a1887f; /* pastel brown */
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #6d6a6a;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #b39ddb; /* pastel lavender */
+    border-bottom: 2px solid #b39ddb;
+}
+
+
+/* =========================
+   MAIN PAGE TEXT SECTIONS
+========================= */
+
+.main-area {
+    margin-top: 30px;
+}
+
+.main-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #a1887f;
+}
+
+/* Soft pastel cards */
+.intro-text,
+.about-project,
+.science-info,
+.animal-info,
+.history-text,
+.future-text,
+.ethics-text,
+.gallery-info,
+.learn-text,
+.end-text {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    background: #ffffff;
+    border-left: 4px solid #ce93d8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.intro-text:hover,
+.about-project:hover,
+.science-info:hover,
+.animal-info:hover,
+.history-text:hover,
+.future-text:hover,
+.ethics-text:hover,
+.gallery-info:hover,
+.learn-text:hover,
+.end-text:hover {
+    background: #fafafa;
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   GALLERY PAGE
+========================= */
+
+.hover-anim {
+    border-radius: 12px;
+    transition: 0.3s;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.hover-anim:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(179, 157, 219, 0.4);
+}
+
+h3 {
+    margin-top: 10px;
+    color: #8d6e63;
+}
+
+
+/* =========================
+   ANIMAL PAGE
+========================= */
+
+.carousel {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.flex-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.info-box {
+    flex: 1;
+    min-width: 250px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+    background: #fafafa;
+}
+
+.box-lower {
+    margin-top: 40px;
+}
+
+
+/* =========================
+   NEWSLETTER PAGE
+========================= */
+
+#newsletterForm {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+#userName,
+#userEmail {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    background: #ffccbc; /* pastel peach */
+    color: #5d4037;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffab91;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.foot {
+    margin-top: 40px;
+    padding: 15px;
+    text-align: center;
+    background: #f5f3ee;
+    border-top: 1px solid #e0ddd7;
+}
+
+.rights {
+    font-size: 14px;
+    color: #8d6e63;
+}
+
+.signup {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #b39ddb;
+}
+
+.signup:hover {
+    color: #9575cd;
+}
+
+
+/* =========================
+   BACKGROUND ANIMATION
+========================= */
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(200,200,200,0.2) 2px, transparent 2px);
+    background-size: 60px 60px;
+    animation: moveBackground 50s linear infinite;
+    z-index: -1;
+}
+
+@keyframes moveBackground {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(200px,200px); }
+}
+
+
+/* =========================
+   FLOATING EFFECT
+========================= */
+
+body::after {
+    content: "🌸 🐾 🌸 🐾";
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 18px;
+    opacity: 0.06;
+    animation: floatLeaves 25s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatLeaves {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100vh); }
+}
+
+
+/* =========================
+   FADE-IN ANIMATION
+========================= */
+
+.main-area,
+.flex-container,
+#newsletterForm,
+.row {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   IMAGE HOVER EFFECT
+========================= */
+
+.hover-anim:hover {
+    transform: scale(1.06) rotate(1deg);
+}
